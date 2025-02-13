@@ -23,7 +23,7 @@ public class Auth {
     public User login(String username, String password){
         User user = userList.get(username);
         if (user != null && user.validatePassword(password)){
-            System.out.println("Login success!");
+            System.out.println("Login success! Welcome " + user.getUsername());
             return user;
         }
         System.out.println("Invalid username or password!");
@@ -34,7 +34,6 @@ public class Auth {
         if (userList.get(username) != null){
             return true;
         }
-
         return false;
     }
 }
