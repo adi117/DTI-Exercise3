@@ -23,11 +23,11 @@ public class User {
         return username;
     }
 
-    public ToDoList getTask() {
-        return toDoList;
-    }
-
     public boolean validatePassword(String password){
         return this.password.equals(password);
+    }
+
+    public ToDoList getToDoList(){
+        return toDoList;
     }
 }
