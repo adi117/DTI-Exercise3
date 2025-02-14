@@ -9,7 +9,7 @@ public class Auth {
         userList = new HashMap<>();
         userList.put("admin", new User("admin", "admin"));
         userList.put("user1", new User("user1", "12345"));
-        userList.put("user2", new User("user2", "matahari"));
+        userList.put("sun", new User("user2", "flower"));
     }
 
     public void register(String username, String password){
