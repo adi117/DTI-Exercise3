@@ -1,9 +1,11 @@
 package org.example;
 
+import org.example.entity.User;
+
 import java.util.HashMap;
 
 public class Auth {
-    HashMap<String, User> userList;
+    private HashMap<String, User> userList;
 
     public Auth(){
         userList = new HashMap<>();

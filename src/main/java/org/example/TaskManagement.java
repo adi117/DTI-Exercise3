@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.entity.User;
+
 public class TaskManagement {
 
     public static void addTask(User user, String task){

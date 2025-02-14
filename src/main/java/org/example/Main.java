@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.entity.User;
+
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -42,24 +44,31 @@ public class Main {
                     System.out.print("Choose menu : ");
                     String menu = scanner.nextLine();
                     String task;
-                    switch (menu){
-                        case "1" :
-                            System.out.print("Type your task : ");
-                            task = scanner.nextLine();
-                            TaskManagement.addTask(currentUser, task);
-                            break;
-                        case "2" :
-                            TaskManagement.viewTask(currentUser);
-                            System.out.print("Task want to remove / done : ");
-                            task = scanner.nextLine();
-                            TaskManagement.removeTask(currentUser, task);
-                            break;
-                        case "3" :
-                            TaskManagement.viewTask(currentUser);
-                            break;
-                        default:
-                            System.exit(0);
-                            break;
+
+                    try{
+                        int menuInt = Integer.parseInt(menu);
+
+                        switch (menuInt){
+                            case 1 :
+                                System.out.print("Type your task : ");
+                                task = scanner.nextLine();
+                                TaskManagement.addTask(currentUser, task);
+                                break;
+                            case 2 :
+                                TaskManagement.viewTask(currentUser);
+                                System.out.print("Task want to remove / done : ");
+                                task = scanner.nextLine();
+                                TaskManagement.removeTask(currentUser, task);
+                                break;
+                            case 3 :
+                                TaskManagement.viewTask(currentUser);
+                                break;
+                            default:
+                                System.exit(0);
+                                break;
+                        }
+                    } catch (Exception e){
+                        System.out.println("Input should be a number!");
                     }
                 } catch (Exception e){
                     System.out.println(e.getMessage());

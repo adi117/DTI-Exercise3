@@ -1,10 +1,10 @@
-package org.example;
+package org.example.entity;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ToDoList {
-    public final List<String> taskList;
+    private final List<String> taskList;
 
     public ToDoList(){
         this.taskList = new ArrayList<>();
@@ -17,6 +17,7 @@ public class ToDoList {
         taskList.remove(task);
     }
     public List<String> getTaskList(){
-        return taskList;
+        return new ArrayList<>(taskList);
+//        Return copy of actual list to prevent mutable list
     }
 }
