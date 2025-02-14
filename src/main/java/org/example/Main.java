@@ -35,9 +35,9 @@ public class Main {
 
                 try{
                     System.out.println("--- Menu ---");
-                    System.out.println("1. Add Task");
-                    System.out.println("2. Remove Task");
-                    System.out.println("3. View Task");
+                    System.out.println("1. Add task");
+                    System.out.println("2. Remove task");
+                    System.out.println("3. View task");
                     System.out.println("q. Quit system");
                     System.out.print("Choose menu : ");
                     String menu = scanner.nextLine();
